@@ -1,0 +1,306 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Jost';
+  src: url('/fonts/Jost-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --color-alli-brick: #963838;
+  --color-riviera-ink: #121212;
+  --color-optic-canvas: #ffffff;
+  --color-sand-raffia: #f7f5f2;
+  --color-woven-ecru: #ede7df;
+  --color-ultraviol-blush: #9b829c;
+  --color-slate-mist: #757575;
+  --color-hairline: #e8e6e1;
+  --color-border-muted: #d2cecb;
+
+  --font-sans: 'Jost', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  --spacing-96: 96px;
+  --spacing-140: 140px;
+}
+
+:root {
+  --color-alli-brick: #963838;
+  --color-riviera-ink: #121212;
+  --color-optic-canvas: #ffffff;
+  --color-sand-raffia: #f7f5f2;
+  --color-woven-ecru: #ede7df;
+  --color-slate-mist: #757575;
+  --color-hairline: #e8e6e1;
+  --color-border-muted: #d2cecb;
+  --color-muted: #9CA3AF;
+  --color-muted-hover: #6B7280;
+
+  font-family: 'Jost', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-optic-canvas);
+  color: var(--color-riviera-ink);
+  font-family: 'Jost', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgb(150 56 56 / 0.18);
+  color: #963838;
+}
+
+/* Custom editorial styles */
+.alli-logo {
+  font-family: 'Jost', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #963838;
+}
+
+.text-micro {
+  font-size: 11px;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.text-nav {
+  font-size: 13px;
+  line-height: 1.25;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.text-caption {
+  font-size: 12px;
+  line-height: 1.35;
+  letter-spacing: 0.08em;
+}
+
+/* Sharp lines & pure luxury corners — Milne Watson strict zero border radius */
+* {
+  border-radius: 0px !important;
+}
+
+/* Milne Watson editorial components adapted to ALLI */
+.aspect-image {
+  aspect-ratio: 4 / 5;
+}
+
+.chip {
+  display: inline-block;
+  background: #ffffff;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-weight: 500;
+  border: 1px solid #e8e6e1;
+}
+
+.chip--brick {
+  background: #963838;
+  color: #ffffff;
+  border: none;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 3.5rem;
+  max-width: 100%;
+  border: 2px solid #963838;
+  background: transparent;
+  color: #121212;
+  font-size: 0.875rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  transition: all 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+}
+
+.btn-outline:hover,
+.btn-outline:focus-visible {
+  background: #963838;
+  color: #ffffff;
+  outline: none;
+}
+
+.btn-outline--black {
+  border-color: #121212;
+}
+
+.btn-outline--black:hover,
+.btn-outline--black:focus-visible {
+  background: #121212;
+  color: #ffffff;
+}
+
+.btn-outline--sand {
+  border-color: #d2cecb;
+}
+
+.btn-outline--sand:hover,
+.btn-outline--sand:focus-visible {
+  background: #121212;
+  border-color: #121212;
+  color: #ffffff;
+}
+
+.input-newsletter {
+  width: 100%;
+  max-width: 25rem;
+  margin-inline: auto;
+  padding: 0.75rem 1rem;
+  border: 1px solid #963838;
+  background: transparent;
+  text-align: center;
+  line-height: 1;
+  outline: none;
+  font-size: 0.875rem;
+  transition: border-color 150ms;
+}
+
+.input-newsletter:focus-visible {
+  border-color: #121212;
+}
+
+/* Milne Watson 50% White Overlay on product hover */
+.tile-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.group:hover .tile-overlay,
+.group:focus-visible .tile-overlay {
+  opacity: 1;
+}
+
+.tile-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(1px);
+}
+
+.underline-style {
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+/* Spinning circular text (Bespoke) */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin 30s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .spin-slow {
+    animation: none;
+  }
+  .tile-overlay {
+    transition: none;
+  }
+}
+
+/* Underline animation for links */
+.hover-underline-expand {
+  position: relative;
+  display: inline-block;
+}
+
+.hover-underline-expand::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: currentColor;
+  transform-origin: bottom right;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hover-underline-expand:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Smooth fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

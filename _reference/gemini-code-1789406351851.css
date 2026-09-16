@@ -1,0 +1,16 @@
+@theme {
+  --color-riviera-ink: #121212;
+  --color-optic-canvas: #ffffff;
+  --color-sand-raffia: #f7f5f2;
+  --color-woven-ecru: #ede7df;
+  --color-ultraviol-blush: #9b829c;
+  --color-slate-mist: #757575;
+  --color-hairline: #e8e6e1;
+  --color-border-muted: #d2cecb;
+
+  --font-sans: 'Jost', 'Futura PT', sans-serif;
+  --font-serif: 'Playfair Display', Georgia, serif;
+
+  --spacing-96: 96px;
+  --spacing-140: 140px;
+}
